@@ -12,9 +12,9 @@ function getParameterByName(name) {
 ckan.module('custom_search_iframe', function ($, _) {
    return {
      initialize: function() {
-       console.log("I've been initialized for element: ", this.el);
-       console.log("Querystring: " + getParameterByName('q'));
+	alert('in');
        this.el.html("<iframe frameborder='0' src='http://daas-dap.cloudapp.net/search?q=" + getParameterByName("q") + "' style='height:1800px;width:100%' />");
+	alert('done');
      }
    };
 });
